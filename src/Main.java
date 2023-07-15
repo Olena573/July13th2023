@@ -41,11 +41,27 @@ public class Main {
 
         copyInputAndOutputStream.wordsFromFirstFile( );
 
+        //Here we delete both files;
+        DeleteFiles letsDeleteTwoFiles = new DeleteFiles ();
+        letsDeleteTwoFiles.filesAreDeleted();
+        //Here we delete a folder;
+        DeleteDirectory letsDeleteFolder = new DeleteDirectory ();
+
+        letsDeleteFolder.directoryIsDeleted ();
+        System.out.println ("--------------");
+
+        //From here the task 2 begins.
 
 
+        System.out.println ("Here is a task 2.");
 
+        Cat someCat = new Cat ("Whiskers", 4, 5);
 
+        System.out.println(someCat.toString());
 
+        someCat.catsFolder();
+
+        someCat.catSerializable ();
 
         }
     }
