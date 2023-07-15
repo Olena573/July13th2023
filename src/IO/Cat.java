@@ -1,14 +1,18 @@
+package IO;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Cat implements Serializable {
+
     //Here is a class for the task 2 of the Homework.
+    //I've had to create a class Cat in the IO package, because it did not work as it should with a separate class Cat.
     String Name;
     int age;
 
-   transient int weight;
+    transient int weight;
 
     private static final long serialVersionUID = -12L;
 
@@ -50,7 +54,7 @@ public class Cat implements Serializable {
 
     @Override
     public String toString() {
-        return "Here is a Cat from task 2." +
+        return "Here is a Cat from task 2." +'\n' +
                 "Cat's Name is: " + Name + "," + '\n' +
                 "This Cat is " + age + " years old," + '\n' +
                 "and a weight of this cat is " + weight + " kg." ;
@@ -64,7 +68,7 @@ public class Cat implements Serializable {
         return Name == cat.Name;
 
     }
-// let's create a folder for this file
+    // let's create a folder for this file
     public static void catsFolder () throws IOException {
         File someFile = new File("C:\\CatTask");
         boolean createDir = someFile.mkdir();
@@ -90,8 +94,4 @@ public class Cat implements Serializable {
         Path catFile = Files.createFile (Paths.get ("C:\\CatTask\\testCatFile.dat"));
     }
 
-
-    }
-
-
-
+}
